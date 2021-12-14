@@ -17,16 +17,14 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class AuthService {
 
-  public user: any;
+  public user;
   private isAndroid = false;
 
   constructor(private storage: LocalStorageService,
     private platform: Platform,
     private afauth: AngularFireAuth,
     private toastCtrl:ToastController) {
-    //this.isAndroid=platform.is("android");
-    //if(!this.isAndroid)
-    // GoogleAuth.init(); //ojo, error aquí, debe estar platform ready -> lee la config clientid del meta de index.html
+    
   }
 
   public async registerEmail(email: string, pass: string) {
@@ -44,18 +42,17 @@ export class AuthService {
 
   public async login() {
     let user: User = await GoogleAuth.signIn();
-    
     this.user = user;
     await this.keepSession();
   }
 
   public async loginEmail(email: string, pass: string) {
-      let user = await this.afauth.signInWithEmailAndPassword(email, pass);
+      let user=  await this.afauth.signInWithEmailAndPassword(email, pass);
       this.user = user;
       await this.keepSession();
-    // return await this.afauth.signInWithEmailAndPassword();
   }
   public async logout() {
+    
     await GoogleAuth.signOut();
     await this.storage.removeItem('user');
     this.user = null;

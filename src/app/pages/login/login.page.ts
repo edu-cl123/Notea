@@ -69,9 +69,7 @@ export class LoginPage implements OnInit {
    * Utilizamos la funcion del servicio para iniciar sesion con la cuenta almacenada en firebase
    */
   public async loginEmail() {
-
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
     if (re.test(this.usu.email) && this.usu.password != "") {
       console.log(this.usu.email);
       try {

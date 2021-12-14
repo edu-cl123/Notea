@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
       } else {
         lang = lang.lang;
       }
-      console.log("SETEANDO " + lang)
       if (this.langsAvailable.indexOf(lang) > -1) {
         traductor.setDefaultLang(lang);
       } else {

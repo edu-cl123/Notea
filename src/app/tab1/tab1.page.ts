@@ -35,8 +35,11 @@ export class Tab1Page {
     
   }
 
+  /**
+   * @param nota Nota seleccionada de la lista
+   * Creamos una alerta que dependiendo del botton procede a llamar al servicio o a no hacer nad
+   */
   public async borra(nota: Note) {
-
     const alett = this.alertCtrl.create({
       header: 'Eliminar Nota',
       message: '¿Esta seguro de borrar la nota?',
@@ -57,7 +60,6 @@ export class Tab1Page {
         text: "Cancel",
         role: 'Error',
       }]
-
     });
     (await alett).present();
   }

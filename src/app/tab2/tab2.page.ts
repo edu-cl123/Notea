@@ -53,7 +53,6 @@ export class Tab2Page {
       description:this.formNote.get("description").value,
       latitud: coord.coords.latitude,
       longitud: coord.coords.longitude
-
     }
     await this.presentLoading();
     try{

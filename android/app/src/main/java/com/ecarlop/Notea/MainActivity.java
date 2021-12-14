@@ -16,7 +16,7 @@ public class MainActivity extends BridgeActivity {
         //aqui los plugin no oficiales
         registerPlugin(GoogleAuth.class);
        
-      // registrePlugin(SecureStoragePlugin.class);
+        //registrePlugin(SecureStoragePlugin.class);
         
         
     }

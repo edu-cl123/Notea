@@ -16,11 +16,6 @@ import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
-
-
-
-
 export function loadTranslator(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }

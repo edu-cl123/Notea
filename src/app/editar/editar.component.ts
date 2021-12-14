@@ -25,6 +25,9 @@ export class EditarComponent implements OnInit {
 
   }
 
+  /**
+   * Generamos una nueva nota y cuando el modal se cierre editamos la nota ya creada
+   */
   editar(){
     const newNote=({
       key:this.key,

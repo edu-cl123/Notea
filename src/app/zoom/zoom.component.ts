@@ -48,7 +48,13 @@ export class ZoomComponent implements OnInit {
     this.modalCtrl.dismiss(null, 'cancelado');
 
   }
+  
+  /**
+   * 
+   * @param val Cantidad de zoom que le añadimos o reducimos
+   */
   async zooming(val) {
+    
     if (this.platfrom.is('android')) {
       TextZoom.get().then((val1: GetResult) => {
         var currentZoom = val1.value
