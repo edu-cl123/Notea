@@ -1,0 +1,49 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Login</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-grid class="ion-align-self-center">
+		
+		<ion-row justify-content-center>
+			<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<ion-item>
+					<ion-label position="floating">Email</ion-label>
+					<ion-input  type="email" [(ngModel)]="usu.email" ></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label position="floating">Password</ion-label>
+					<ion-input type="Password" [(ngModel)]="usu.password" (input)="readData($event.target.value)"></ion-input>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+		<ion-row justify-content-center>
+			<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<div padding>
+					<ion-button size="large" expand="block" (click)="loginEmail()">Login</ion-button>
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row justify-content-center>
+			<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<div padding>
+					<ion-button color="success" size="large" expand="block" (click)="registerEmail()">Register</ion-button>
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row justify-content-center>
+			<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<div text-center>
+					<h4>Or</h4>
+				</div>
+				<div padding>
+					<ion-button color="warning" size="large" expand="block" (click)="signin()">Login With Goggle</ion-button>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

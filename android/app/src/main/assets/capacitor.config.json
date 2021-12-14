@@ -1,0 +1,16 @@
+{
+	"appId": "com.ecarlop.Notea",
+	"appName": "Notea",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"GoogleAuth": {
+			"scopes": [
+				"profile",
+				"email"
+			],
+			"serverClientId": "595066594229-uuh2oeuvmn90fcab36cksl5kjvrbnltq.apps.googleusercontent.com",
+			"forceCodeForRefreshToken": true
+		}
+	}
+}

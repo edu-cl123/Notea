@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Ver Nota</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h2 style="text-align: center;">
+    <ion-label>Titulo: {{title}}</ion-label>
+  </h2>
+
+  <h2 style="text-align: center;">
+    <ion-label>Descripción: {{description}}</ion-label>
+  </h2>
+  <h2 style="text-align: center;">
+    <ion-text>
+      <ion-button (click)="zooming(-0.1)">
+        <ion-icon name="remove-outline">
+        </ion-icon>
+      </ion-button>
+      Zoom
+      <ion-button (click)="zooming(0.1)">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-text>
+  </h2>
+
+  <div id="map" ></div>
+</ion-content>
